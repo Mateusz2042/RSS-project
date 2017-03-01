@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.ObjectModel;
+using Rsss.DatabaseWriter;
 
 namespace Rsss
 {
@@ -77,6 +78,11 @@ namespace Rsss
             //        }
             //    }
             //}
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Writer.Write();
         }
     }
 }

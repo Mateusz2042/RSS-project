@@ -16,6 +16,7 @@ namespace Rsss
 
             public string Link;
 
+
             public DateTime Date;
         }
     }

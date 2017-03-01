@@ -10,3 +10,16 @@ C:\Users\Mateusz\Desktop\Rsss\Rsss\obj\Debug\Rsss.pdb
 C:\Users\Mateusz\Desktop\RSS-project\Rsss\Rsss\bin\Debug\Rsss.exe.config
 C:\Users\Mateusz\Desktop\RSS-project\Rsss\Rsss\obj\Debug\Rsss.exe
 C:\Users\Mateusz\Desktop\RSS-project\Rsss\Rsss\obj\Debug\Rsss.pdb
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\bin\Debug\Rsss.exe.config
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\obj\Debug\Rsss.exe
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\obj\Debug\Rsss.pdb
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\obj\Debug\Rsss.csprojResolveAssemblyReference.cache
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\obj\Debug\Rsss.Form1.resources
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\obj\Debug\Rsss.Properties.Resources.resources
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\obj\Debug\Rsss.csproj.GenerateResource.Cache
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\bin\Debug\Rsss.exe
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\bin\Debug\Rsss.pdb
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\bin\Debug\EntityFramework.dll
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\bin\Debug\EntityFramework.xml
+C:\Users\Saul\Desktop\falat\RSS-project\Rsss\Rsss\bin\Debug\EntityFramework.SqlServer.xml

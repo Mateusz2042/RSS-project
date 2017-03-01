@@ -30,92 +30,92 @@ namespace Rsss
         }
 
         public string Url
-  {
-    get { return _url; }
-    set { _url = value; }
-  }
+        {
+            get { return _url; }
+            set { _url = value; }
+        }
 
-  public Collection<Rss.Items> RssItems
-  {
-    get { return _rssItems; }
-  }
-      
-  public string FeedTitle
-  {
-    get { return _feedTitle; }
-  }
+        public Collection<Rss.Items> RssItems
+        {
+            get { return _rssItems; }
+        }
 
-  public string FeedDescription
-  {
-    get { return _feedDescription; }
-  }
+        public string FeedTitle
+        {
+            get { return _feedTitle; }
+        }
 
-  public Collection<Rss.Items> GetFeed()
-  {
+        public string FeedDescription
+        {
+            get { return _feedDescription; }
+        }
 
-    if (String.IsNullOrEmpty(Url))
+        public Collection<Rss.Items> GetFeed()
+        {
 
-      throw new ArgumentException("You must provide a feed URL");
+            if (String.IsNullOrEmpty(Url))
 
-    using (XmlReader reader = XmlReader.Create(Url))
-    {
-      XmlDocument xmlDoc = new XmlDocument();
-      xmlDoc.Load(reader);
+                throw new ArgumentException("You must provide a feed URL");
 
-      ParseDocElements(xmlDoc.SelectSingleNode("//channel"), "title", ref _feedTitle);
-      ParseDocElements(xmlDoc.SelectSingleNode("//channel"), "description", ref _feedDescription);
-      ParseRssItems(xmlDoc);
+            using (XmlReader reader = XmlReader.Create(Url))
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(reader);
 
-      return _rssItems;
-    }
-  }
+                ParseDocElements(xmlDoc.SelectSingleNode("//channel"), "title", ref _feedTitle);
+                ParseDocElements(xmlDoc.SelectSingleNode("//channel"), "description", ref _feedDescription);
+                ParseRssItems(xmlDoc);
 
-  private void ParseRssItems(XmlDocument xmlDoc)
-  {
-    _rssItems.Clear();
-    XmlNodeList nodes = xmlDoc.SelectNodes("rss/channel/item");
+                return _rssItems;
+            }
+        }
 
-    foreach (XmlNode node in nodes)
-    {
-      Rss.Items item = new Rss.Items();
-      ParseDocElements(node, "title", ref item.Title);
-      ParseDocElements(node, "description", ref item.Description);
-      ParseDocElements(node, "link", ref item.Link);
+        private void ParseRssItems(XmlDocument xmlDoc)
+        {
+            _rssItems.Clear();
+            XmlNodeList nodes = xmlDoc.SelectNodes("rss/channel/item");
 
-      string date = null;
-      ParseDocElements(node, "pubDate", ref date);
-      DateTime.TryParse(date, out item.Date);
+            foreach (XmlNode node in nodes)
+            {
+                Rss.Items item = new Rss.Items();
+                ParseDocElements(node, "title", ref item.Title);
+                
+                ParseDocElements(node, "link", ref item.Link);
 
-      _rssItems.Add(item);
-    }
-  }
+                string date = null;
+                ParseDocElements(node, "pubDate", ref date);
+                DateTime.TryParse(date, out item.Date);
 
-  private void ParseDocElements(XmlNode parent, string xPath, ref string property)
-  {
-    XmlNode node = parent.SelectSingleNode(xPath);
-    if (node != null)
-      property = node.InnerText;
-    else
-      property = "Unresolvable";
-  }
+                _rssItems.Add(item);
+            }
+        }
 
-  private void Dispose(bool disposing)
-  {
-    if (disposing && !_IsDisposed)
-    {
-      _rssItems.Clear();
-      _url = null;
-      _feedTitle = null;
-      _feedDescription = null;
-    }
+        private void ParseDocElements(XmlNode parent, string xPath, ref string property)
+        {
+            XmlNode node = parent.SelectSingleNode(xPath);
+            if (node != null)
+                property = node.InnerText;
+            else
+                property = "Unresolvable";
+        }
 
-    _IsDisposed = true;
-  }
+        private void Dispose(bool disposing)
+        {
+            if (disposing && !_IsDisposed)
+            {
+                _rssItems.Clear();
+                _url = null;
+                _feedTitle = null;
+                _feedDescription = null;
+            }
 
-  public void Dispose()
-  {
-    Dispose(true);
-    GC.SuppressFinalize(this);
-  }
+            _IsDisposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
     }
 }
