@@ -14,7 +14,8 @@ namespace Rsss.Database
         public string Title { get; set; }
         public string PageLink { get; set; }
         public DateTime PublishDate { get; set; }
+        public virtual RssChannel Channel { get; set; }
 
-        
+
     }
 }
