@@ -20,9 +20,11 @@ namespace Rsss.DatabaseWriter
             // write test
             using (var db = new RssContext())
             {
+
                 RssChannel channel1 = new RssChannel();
                 channel1.ChannelName = url;
-                channel1.ChannelID = 1;
+
+
 
 
                 try
@@ -31,7 +33,7 @@ namespace Rsss.DatabaseWriter
                     reader.GetFeed();
                     noticeItems = reader.RssItems;
 
-                    
+
                     for (int i = 0; i < noticeItems.Count; i++)
                     {
 
@@ -42,14 +44,12 @@ namespace Rsss.DatabaseWriter
                         notice.Channel = channel1;
 
                         db.Notice.Add(notice);
-                       
-                        
 
                         
-                       
+
 
                     }
-                    
+
                     //db.RssChannel.Add(channel1);
                     db.SaveChanges();
 
