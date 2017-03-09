@@ -24,7 +24,12 @@ namespace Rsss.DatabaseWriter
                 RssChannel channel1 = new RssChannel();
                 channel1.ChannelName = url;
 
+                // mateusz
+                //WebClient client = new WebClient();
+                //client.OpenRead(url);
 
+                //var x = client.Headers["ContentType"];
+                // end mateusz
 
 
                 try
@@ -41,16 +46,17 @@ namespace Rsss.DatabaseWriter
                         notice.PageLink = url;
                         notice.PublishDate = noticeItems[i].Date;
                         notice.Title = noticeItems[i].Title;
-                        notice.Channel = channel1;
+                        notice.Channel_Id = channel1.ChannelID;
+                        notice.PageText = "";
 
                         db.Notice.Add(notice);
 
-                        
+
 
 
                     }
 
-                    //db.RssChannel.Add(channel1);
+                    db.RssChannel.Add(channel1);
                     db.SaveChanges();
 
                 }
