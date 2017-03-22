@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.ObjectModel;
 using Rsss.DatabaseWriter;
+using HtmlAgilityPack;
+using System.Xml;
 
 namespace Rsss
 {
@@ -21,32 +23,6 @@ namespace Rsss
         RssManager reader = new RssManager();
         Collection<Rss.Items> list;
         ListViewItem row;
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            listView1.Items.Clear();
-            try
-            {
-                reader.Url = textBox1.Text;
-                reader.GetFeed();
-                list = reader.RssItems;
-
-                for (int i = 0; i < list.Count; i++)
-                {
-                    row = new ListViewItem();
-                    row.Text = list[i].Title;
-                    row.SubItems.Add(list[i].Link);
-                    row.SubItems.Add(list[i].Date.ToShortDateString());
-                    listView1.Items.Add(row);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-
-            }
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -82,7 +58,66 @@ namespace Rsss
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DbWriter.Write(textBox1.Text);
+            DbWriter.Write(comboBox1.Text);
+        }
+
+        List<string> AllLinks = new List<string>();
+        List<string> XmlLinks = new List<string>();
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            AllLinks.Clear();
+            XmlLinks.Clear();
+
+            HtmlWeb hw = new HtmlWeb();
+            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+            doc = hw.Load("http://www.rss.lostsite.pl/index.php?rss=32");
+            foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
+            {
+                string hrefValue = link.GetAttributeValue("href", string.Empty);
+                AllLinks.Add(hrefValue);
+            }
+
+            int size = 0;
+            for (int i = 0; i < AllLinks.Count; i++)
+            {
+                size = AllLinks[i].Length;
+                if (AllLinks[i][AllLinks[i].Length - 3] == 'x' && AllLinks[i][AllLinks[i].Length - 2] == 'm' && AllLinks[i][AllLinks[i].Length - 1] == 'l')
+                {
+                    XmlLinks.Add(AllLinks[i]);
+                }
+            }
+            for (int i = 0; i < XmlLinks.Count; i++)
+            {
+                comboBox1.Items.Add(XmlLinks[i]);
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            try
+            {
+                reader.Url = comboBox1.Text;
+                reader.GetFeed();
+                list = reader.RssItems;
+
+                for (int i = 0; i < list.Count; i++)
+                {
+                    row = new ListViewItem();
+                    row.Text = list[i].Title;
+                    row.SubItems.Add(list[i].Link);
+                    row.SubItems.Add(list[i].Date.ToShortDateString());
+                    listView1.Items.Add(row);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            }
         }
     }
 }
