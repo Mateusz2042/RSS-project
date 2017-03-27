@@ -12,6 +12,7 @@ namespace Rsss.Database
         [Key]
         public int ChannelID { get; set; }
         public string ChannelName { get; set; }
+        public string ChannelLink { get; set; }
         public virtual List<Notice> Notices { get; set; }
     }
 }

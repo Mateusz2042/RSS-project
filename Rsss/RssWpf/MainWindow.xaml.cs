@@ -22,17 +22,25 @@ namespace RssWpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        RssContext db;
+        List<Notice> notices;
+        
         public MainWindow()
         {
-            var db = new RssContext();
+            db = new RssContext();
             InitializeComponent();
 
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            //odczyt z bazy
+            using (db)
+            {
+                // wszzystkie notatki
+                notices = db.Notice.ToList();
+            }
             
-            DbWriter.Write();
         }
     }
 }

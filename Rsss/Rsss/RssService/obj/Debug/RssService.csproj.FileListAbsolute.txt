@@ -1,0 +1,15 @@
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\RssService.exe.config
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\RssService.exe
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\RssService.pdb
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\DatabaseDll.dll
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\EntityFramework.dll
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\HtmlAgilityPack.dll
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\DatabaseDll.pdb
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\EntityFramework.xml
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\HtmlAgilityPack.xml
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\obj\Debug\RssService.csprojResolveAssemblyReference.cache
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\obj\Debug\RssService.exe
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\obj\Debug\RssService.pdb
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\EntityFramework.SqlServer.xml

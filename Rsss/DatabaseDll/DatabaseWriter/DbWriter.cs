@@ -10,93 +10,119 @@ using System.Threading.Tasks;
 
 namespace Rsss.DatabaseWriter
 {
-	public static class DbWriter
-	{
+    public static class DbWriter
+    {
 
-		static RssManager reader = new RssManager();
-		static Collection<Rss.Items> noticeItems;
+        static RssManager reader = new RssManager();
+        static Collection<Rss.Items> noticeItems;
 
-		static List<string> AllLinks = new List<string>();
-		static List<string> XmlLinks = new List<string>();
+        static List<string> AllLinks = new List<string>();
+        static List<string> XmlLinks = new List<string>();
 
-		private static void GetLinks()
-		{
-			AllLinks.Clear();
-			XmlLinks.Clear();
+        private static void GetLinks()
+        {
+            AllLinks.Clear();
+            XmlLinks.Clear();
 
-			HtmlWeb hw = new HtmlWeb();
-			HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-			doc = hw.Load("http://www.rss.lostsite.pl/index.php?rss=32");
-			foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
-			{
-				string hrefValue = link.GetAttributeValue("href", string.Empty);
-				AllLinks.Add(hrefValue);
-			}
+            HtmlWeb hw = new HtmlWeb();
+            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+            doc = hw.Load("http://www.rss.lostsite.pl/index.php?rss=32");
+            foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
+            {
+                string hrefValue = link.GetAttributeValue("href", string.Empty);
+                AllLinks.Add(hrefValue);
+            }
 
-			int size = 0;
-			for (int i = 0; i < AllLinks.Count; i++)
-			{
-				size = AllLinks[i].Length;
-				if (AllLinks[i][AllLinks[i].Length - 3] == 'x' && AllLinks[i][AllLinks[i].Length - 2] == 'm' && AllLinks[i][AllLinks[i].Length - 1] == 'l')
-				{
-					XmlLinks.Add(AllLinks[i]);
-				}
-			}
+            int size = 0;
+            for (int i = 0; i < AllLinks.Count; i++)
+            {
+                size = AllLinks[i].Length;
+                if (AllLinks[i][AllLinks[i].Length - 3] == 'x' && AllLinks[i][AllLinks[i].Length - 2] == 'm' && AllLinks[i][AllLinks[i].Length - 1] == 'l')
+                {
+                    XmlLinks.Add(AllLinks[i]);
+                }
+            }
 
-		}
-		public static void Write()
-		{
-			// write test
-			GetLinks();
-			// write test
-			using (var db = new RssContext())
-			{
-				foreach (var item in XmlLinks)
-				{
-					//int count = 1;
-					RssChannel channel = new RssChannel();
-					channel.ChannelName = item;
-                    //channel.ChannelLink = item;
-                    db.RssChannel.Add(channel);
-                    db.SaveChanges();
+        }
+
+        public static void Write()
+        {
+
+            GetLinks();
+
+            using (var db = new RssContext())
+            {
+                var test = db.RssChannel.FirstOrDefault();
+                foreach (var item in XmlLinks)
+                {
+                    int counter = 1;
+
+                    
+
+                    
+
+                    //int count = 1;
+
                     try
-					{
-						reader.Url = item;
-						reader.GetFeed();
-						noticeItems = reader.RssItems;
+                    {
+                        reader.Url = item;
+                        reader.GetFeed();
+                        noticeItems = reader.RssItems;
+
+                        // checking db existing
+                        RssChannel channel = new RssChannel();
+                        
+
+                        if (test == null)
+                        {
+
+                            channel.ChannelName = "Channel" + counter;
+                            channel.ChannelLink = item;
+                            db.RssChannel.Add(channel);
+                            db.SaveChanges();
+                        }
+                        else
+                        {
+                            channel = db.RssChannel.Where(x => x.ChannelID == counter).First();
+                        }
 
 
-						for (int i = 0; i < noticeItems.Count; i++)
-						{
+                        for (int i = 0; i < noticeItems.Count; i++)
+                        {
 
-							Notice notice = new Notice();
-							notice.PageLink = item;
-							notice.PublishDate = noticeItems[i].Date;
-							notice.Title = noticeItems[i].Title;
-							notice.Channel_Id = channel.ChannelID;
-							notice.PageText = "";
-
-							db.Notice.Add(notice);
-
-
-
-
-						}
-
-						//db.RssChannel.Add(channel);
-						db.SaveChanges();
-
-					}
-					catch (Exception ex)
-					{
+                            Notice notice = new Notice();
+                            notice.PageLink = "";
+                            notice.PublishDate = noticeItems[i].Date;
+                            notice.Title = noticeItems[i].Title;
+                            notice.Channel_Id = channel.ChannelID;
+                            notice.PageText = "";
+                            if (db.Notice.Where(x => x.Title == notice.Title).FirstOrDefault() == null)
+                            {
+                                db.Notice.Add(notice);
+                            }
 
 
-					}
-				}
 
-			}
-		}
 
-	}
+
+                        }
+
+                        //db.RssChannel.Add(channel);
+                        db.SaveChanges();
+                        counter++;
+
+                    }
+                    catch (Exception ex)
+                    {
+
+
+                    }
+                }
+
+            }
+        }
+
+
+    }
 
 }
