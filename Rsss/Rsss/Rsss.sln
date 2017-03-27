@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rsss", "Rsss.csproj", "{910B4BF3-1E15-4B81-B246-86DFCFA768C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssWpf", "..\RssWpf\RssWpf.csproj", "{DEAA954D-5B6B-4FD4-8E8F-028D8752D088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseDll", "..\DatabaseDll\DatabaseDll.csproj", "{78DC2D95-3A79-4A1D-B278-ED14E0AF61E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{910B4BF3-1E15-4B81-B246-86DFCFA768C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{910B4BF3-1E15-4B81-B246-86DFCFA768C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{910B4BF3-1E15-4B81-B246-86DFCFA768C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEAA954D-5B6B-4FD4-8E8F-028D8752D088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEAA954D-5B6B-4FD4-8E8F-028D8752D088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEAA954D-5B6B-4FD4-8E8F-028D8752D088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEAA954D-5B6B-4FD4-8E8F-028D8752D088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DC2D95-3A79-4A1D-B278-ED14E0AF61E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DC2D95-3A79-4A1D-B278-ED14E0AF61E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DC2D95-3A79-4A1D-B278-ED14E0AF61E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DC2D95-3A79-4A1D-B278-ED14E0AF61E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

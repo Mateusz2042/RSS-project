@@ -58,7 +58,8 @@ namespace Rsss
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DbWriter.Write(comboBox1.Text);
+            //DbWriter.Write();
+            
         }
 
         List<string> AllLinks = new List<string>();
