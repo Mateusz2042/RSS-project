@@ -10,3 +10,8 @@ C:\Users\PawelP\Desktop\RSS-project\Rsss\DatabaseDll\bin\Debug\EntityFramework.x
 C:\Users\PawelP\Desktop\RSS-project\Rsss\DatabaseDll\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\PawelP\Desktop\RSS-project\Rsss\DatabaseDll\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\PawelP\Desktop\RSS-project\Rsss\DatabaseDll\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\DatabaseDll\bin\Debug\DatabaseDll.dll.config
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\DatabaseDll\bin\Debug\DatabaseDll.dll
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\DatabaseDll\bin\Debug\DatabaseDll.pdb
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\DatabaseDll\obj\Debug\DatabaseDll.dll
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\DatabaseDll\obj\Debug\DatabaseDll.pdb

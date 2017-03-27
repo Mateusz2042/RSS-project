@@ -19,3 +19,16 @@ C:\Users\PawelP\Desktop\RSS-project\Rsss\RssService\obj\Debug\RssService.pdb
 C:\Users\PawelP\Desktop\RSS-project\Rsss\RssSolution\RssService\bin\Debug\RssService.exe.config
 C:\Users\PawelP\Desktop\RSS-project\Rsss\RssSolution\RssService\obj\Debug\RssService.exe
 C:\Users\PawelP\Desktop\RSS-project\Rsss\RssSolution\RssService\obj\Debug\RssService.pdb
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\RssService.exe.config
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\RssService.exe
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\RssService.pdb
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\DatabaseDll.dll
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\EntityFramework.dll
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\DatabaseDll.pdb
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\EntityFramework.xml
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\obj\Debug\RssService.csprojResolveAssemblyReference.cache
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\obj\Debug\RssService.exe
+C:\Users\Saul\Desktop\falat2\RSS-project\Rsss\RssSolution\RssService\obj\Debug\RssService.pdb
