@@ -11,3 +11,6 @@ C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\obj\Debug\Rsss.Properties.Resource
 C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\obj\Debug\RsssTests.csproj.GenerateResource.Cache
 C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\obj\Debug\Rsss.exe
 C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\obj\Debug\Rsss.pdb
+C:\Users\PawelP\Desktop\RSS-project\Rsss\RssSolution\bin\Debug\Rsss.exe.config
+C:\Users\PawelP\Desktop\RSS-project\Rsss\RssSolution\obj\Debug\Rsss.exe
+C:\Users\PawelP\Desktop\RSS-project\Rsss\RssSolution\obj\Debug\Rsss.pdb

@@ -13,3 +13,9 @@ C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\obj\Debug\RssService.ex
 C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\obj\Debug\RssService.pdb
 C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\PawelP\Desktop\RSS-project\Rsss\Rsss\RssService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PawelP\Desktop\RSS-project\Rsss\RssService\bin\Debug\RssService.exe.config
+C:\Users\PawelP\Desktop\RSS-project\Rsss\RssService\obj\Debug\RssService.exe
+C:\Users\PawelP\Desktop\RSS-project\Rsss\RssService\obj\Debug\RssService.pdb
+C:\Users\PawelP\Desktop\RSS-project\Rsss\RssSolution\RssService\bin\Debug\RssService.exe.config
+C:\Users\PawelP\Desktop\RSS-project\Rsss\RssSolution\RssService\obj\Debug\RssService.exe
+C:\Users\PawelP\Desktop\RSS-project\Rsss\RssSolution\RssService\obj\Debug\RssService.pdb
