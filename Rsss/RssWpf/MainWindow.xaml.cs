@@ -36,14 +36,14 @@ namespace RssWpf
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            //odczyt z bazy
-            //using (db)
-            //{
-            //    // wszzystkie notatki
-            //    notices = db.Notice.ToList();
-            //}
+			//odczyt z bazy
+			//using (db)
+			//{
+			//    // wszzystkie notatki
+			//    notices = db.Notice.ToList();
+			//}
 
-            string s = textBox.Text;
+			string s = comboBoxChannel.Text;
             int i = int.Parse(s);
             Reader r = new Reader();
 

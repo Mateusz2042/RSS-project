@@ -34,7 +34,7 @@
             </Button.Background>
         </Button>
         <TextBlock x:Name="textBlock" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="450" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock dla Grzesia" VerticalAlignment="Top" Width="440" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="White"/>
-        <ComboBox x:Name="comboBox" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="590,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand">
+        <ComboBox x:Name="comboBoxChannel" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="590,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FFC79A00" Offset="0"/>
@@ -49,7 +49,8 @@
                     <GradientStop Color="#FFE5D100" Offset="0.2"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
-        </ComboBox>
+			<ComboBoxItem Content="Nazwa kanalu 1" HorizontalAlignment="Left" Width="138"/>
+		</ComboBox>
         <Button x:Name="button_Copy" Content="BY ID" HorizontalAlignment="Left" Height="41" Margin="467,89,0,0" VerticalAlignment="Top" Width="103" Click="button_Click" Grid.Column="3" FontWeight="Bold" BorderThickness="10" Cursor="Hand">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

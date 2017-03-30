@@ -40,3 +40,16 @@ C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssSolution\obj\Debug\RsssTest
 C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssSolution\obj\Debug\Rsss.Form1.resources
 C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssSolution\obj\Debug\Rsss.Properties.Resources.resources
 C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssSolution\obj\Debug\RsssTests.csproj.GenerateResource.Cache
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\bin\Debug\Rsss.exe.config
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\bin\Debug\Rsss.exe
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\bin\Debug\Rsss.pdb
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\bin\Debug\EntityFramework.dll
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\bin\Debug\EntityFramework.xml
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\obj\Debug\RsssTests.csprojResolveAssemblyReference.cache
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\obj\Debug\Rsss.Form1.resources
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\obj\Debug\Rsss.Properties.Resources.resources
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\obj\Debug\RsssTests.csproj.GenerateResource.Cache
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\obj\Debug\Rsss.exe
+C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssSolution\obj\Debug\Rsss.pdb
