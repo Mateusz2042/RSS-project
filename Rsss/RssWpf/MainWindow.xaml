@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RssWpf"
         mc:Ignorable="d"
-        Title="Rss Research" Height="500" Width="900" Icon="C:\RSS\RSS-project\Rsss\RssWpf\ArrowDown.png">
+        Title="Rss Research" Height="500" Width="900" Icon="C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssWpf\Graphics\ArrowDown.png">
     <Grid Width="900" MaxWidth="900" MaxHeight="500" Height="500">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -33,7 +33,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="textBlock" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="450" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock dla Grzesia" VerticalAlignment="Top" Width="440" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="White"/>
+        <TextBlock x:Name="textBlock" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="450" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="440" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="White"/>
         <ComboBox x:Name="comboBoxChannel" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="590,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">

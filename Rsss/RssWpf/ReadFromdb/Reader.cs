@@ -14,6 +14,7 @@ namespace RssWpf.ReadFromdb
     {
         RssContext db = new RssContext();
         List<Notice> notices;
+        List<Notice> id;
         internal void FindNoticeByID(int noticeid)
         {
 
@@ -21,7 +22,7 @@ namespace RssWpf.ReadFromdb
             notices = db.Notice.ToList();
             foreach (var item in notices)
             {
-
+                
 
             }
             //Notice note =
@@ -33,14 +34,16 @@ namespace RssWpf.ReadFromdb
             // dzisiejsze rssy
             // po id kanału
         }
-        public void FindByChannelID()
+        public void FindByChannelID(int channelid)
         {
-
+            Notice note = db.Notice.First(c => c.Channel_Id == channelid);
+            notices = db.Notice.ToList();
 
 
         }
         public void FindTodayNotices()
         {
+            
             Notice note = db.Notice.First(c => c.PublishDate == DateTime.Today);
             notices = db.Notice.ToList();
 
@@ -50,5 +53,9 @@ namespace RssWpf.ReadFromdb
             //var querry = db.Notice.ToList();
 
         }
+
+      
+
+        }
     }
-}
+

@@ -30,31 +30,48 @@ namespace RssWpf
         public MainWindow()
         {
             db = new RssContext();
+
+
             InitializeComponent();
+
 
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-			//odczyt z bazy
-			//using (db)
-			//{
-			//    // wszzystkie notatki
-			//    notices = db.Notice.ToList();
-			//}
+            //odczyt z bazy
+            //using (db)
+            //{
+            //    // wszzystkie notatki
+            //    notices = db.Notice.ToList();
+            //}
 
-			string s = comboBoxChannel.Text;
-            int i = int.Parse(s);
-            Reader r = new Reader();
+            //string s = comboBoxChannel.Text;
+            //int i = int.Parse(s);
+            //Reader r = new Reader();
 
-            r.FindNoticeByID(i);
-            foreach (var item in notices)
+            //r.FindNoticeByID(i);
+            //foreach (var item in notices)
+            //{
+            //    textBlock.Text += item.Title;
+            //}
+            ComboBoxAddValue();
+        }
+        public void ComboBoxAddValue()
+        {
+            List<int> Itemslist = new List<int>();
+            //comboBox_Copy.ItemsSource = db.Notice.ToList();
+            //comboBox_Copy.SelectedValuePath = "NoticeID";
+            //comboBox_Copy.DisplayMemberPath = "Title";
+            foreach (var item in db.Notice.Where(a => a.NoticeID != null).ToList())
             {
-                textBlock.Text += item.Title;
+                Itemslist.Add(item.NoticeID);
             }
+        comboBox_Copy.ItemsSource = Itemslist;
+        }
 
 
         }
 
     }
-}
+
