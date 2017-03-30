@@ -45,11 +45,9 @@ namespace RssWpf
             //    // wszzystkie notatki
             //    notices = db.Notice.ToList();
             //}
-
             //string s = comboBoxChannel.Text;
             //int i = int.Parse(s);
             //Reader r = new Reader();
-
             //r.FindNoticeByID(i);
             //foreach (var item in notices)
             //{
