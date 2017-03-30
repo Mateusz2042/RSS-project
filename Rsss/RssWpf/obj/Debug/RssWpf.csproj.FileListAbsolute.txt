@@ -78,3 +78,11 @@ C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssWpf\obj\Debug\MainWindow.ba
 C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.g.resources
 C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.Properties.Resources.resources
 C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.csproj.GenerateResource.Cache
+C:\RSS\Nowy folder\RSS-project\Rsss\RssWpf\bin\Debug\RssWpf.exe.config
+C:\RSS\Nowy folder\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.exe
+C:\RSS\Nowy folder\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.pdb
+C:\RSS\Nowy folder\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.csprojResolveAssemblyReference.cache
+C:\RSS\Nowy folder\RSS-project\Rsss\RssWpf\obj\Debug\MainWindow.g.cs
+C:\RSS\Nowy folder\RSS-project\Rsss\RssWpf\obj\Debug\App.g.cs
+C:\RSS\Nowy folder\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf_MarkupCompile.cache
+C:\RSS\Nowy folder\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf_MarkupCompile.lref
