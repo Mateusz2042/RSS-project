@@ -11,6 +11,8 @@
         <Calendar HorizontalAlignment="Left" Height="157" Margin="293,81,-20.6,0" VerticalAlignment="Top" Width="246"/>
         <Label x:Name="label" Content="Tutaj ma być ładna aplikacja" HorizontalAlignment="Left" Height="27" Margin="42,10,0,0" VerticalAlignment="Top" Width="218"/>
         <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="41" Margin="42,101,0,0" VerticalAlignment="Top" Width="69"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="190,76,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="155,158,0,0" Height="80" Width="133"/>
 
     </Grid>
 </Window>

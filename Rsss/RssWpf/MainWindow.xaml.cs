@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RssWpf.ReadFromdb;
+
 
 namespace RssWpf
 {
@@ -24,7 +26,7 @@ namespace RssWpf
     {
         RssContext db;
         List<Notice> notices;
-        
+
         public MainWindow()
         {
             db = new RssContext();
@@ -35,12 +37,24 @@ namespace RssWpf
         private void button_Click(object sender, RoutedEventArgs e)
         {
             //odczyt z bazy
-            using (db)
+            //using (db)
+            //{
+            //    // wszzystkie notatki
+            //    notices = db.Notice.ToList();
+            //}
+
+            string s = textBox.Text;
+            int i = int.Parse(s);
+            Reader r = new Reader();
+
+            r.FindNoticeByID(i);
+            foreach (var item in notices)
             {
-                // wszzystkie notatki
-                notices = db.Notice.ToList();
+                textBlock.Text += item.Title;
             }
-            
+
+
         }
+
     }
 }
