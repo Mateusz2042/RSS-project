@@ -51,15 +51,16 @@ namespace Rsss.DatabaseWriter
 
 		public static void Write()
 		{
-
-			GetLinks();
+            //AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Directory.GetCurrentDirectory());
+            GetLinks();
 
 			using (var db = new RssContext())
 			{
 				var test = db.RssChannel.FirstOrDefault();
-				foreach (var item in XmlLinks)
+                int counter = 0;
+                foreach (var item in XmlLinks)
 				{
-					int counter = 1;
+					
 
 					try
 					{
@@ -67,8 +68,9 @@ namespace Rsss.DatabaseWriter
 						reader.GetFeed();
 						noticeItems = reader.RssItems;
 
-						// checking db existing
-						RssChannel channel = new RssChannel();
+                        // checking db existing
+                        counter++;
+                        RssChannel channel = new RssChannel();
 						if (test == null)
 						{
 
@@ -98,12 +100,12 @@ namespace Rsss.DatabaseWriter
 							{
 								db.Notice.Add(notice);
 							}
-
-						}
+                            
+                        }
 
 						//db.RssChannel.Add(channel);
 						db.SaveChanges();
-						counter++;
+						
 
 					}
 					catch (Exception ex)

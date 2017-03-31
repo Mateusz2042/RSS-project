@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RssWpf"
         mc:Ignorable="d"
-        Title="Rss Research" Height="500" Width="900" Icon="C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssWpf\Graphics\ArrowDown.png">
+        Title="Rss Research" Height="500" Width="900">
     <Grid Width="900" MaxWidth="900" MaxHeight="500" Height="500">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
