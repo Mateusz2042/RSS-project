@@ -7,13 +7,10 @@ using System.Threading.Tasks;
 
 namespace Rsss.Database
 {
-    public class RssContext : DbContext
+    public class RssContext: DbContext
     {
         public DbSet<RssChannel> RssChannel { get; set; }
         public DbSet<Notice> Notice { get; set; }
-
-         
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

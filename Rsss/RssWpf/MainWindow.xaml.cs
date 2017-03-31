@@ -36,7 +36,7 @@ namespace RssWpf
 
 
         }
-
+ 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             //odczyt z bazy
@@ -49,12 +49,14 @@ namespace RssWpf
             //int i = int.Parse(s);
             //Reader r = new Reader();
             //r.FindNoticeByID(i);
-            //foreach (var item in notices)
-            //{
-            //    textBlock.Text += item.Title;
-            //}
-            ComboBoxAddValue();
+            //Reader read = new Reader();
+            //read.FindTodayNotices();
+            var noteAll = db.Notice.ToList();
+            listView.ItemsSource = noteAll;
+
+            //ComboBoxAddValue();
         }
+
         public void ComboBoxAddValue()
         {
             List<int> Itemslist = new List<int>();

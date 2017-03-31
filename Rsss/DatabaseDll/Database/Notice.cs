@@ -14,7 +14,7 @@ namespace Rsss.Database
         public int NoticeID { get; set; }
         public string Title { get; set; }
         public string PageLink { get; set; }
-        public string PageText { get; set; }
+
         public DateTime PublishDate { get; set; }
 
         [ForeignKey("Channel")]

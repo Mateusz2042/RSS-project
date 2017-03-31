@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RssWpf"
         mc:Ignorable="d"
-        Title="Rss Research" Height="500" Width="900">
+        Title="Rss Research" Height="500" Width="900" Icon="C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssWpf\Graphics\ArrowDown.png">
     <Grid Width="900" MaxWidth="900" MaxHeight="500" Height="500">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -33,7 +33,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="textBlock" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="450" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="440" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="White"/>
         <ComboBox x:Name="comboBoxChannel" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="590,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -49,9 +48,9 @@
                     <GradientStop Color="#FFE5D100" Offset="0.2"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
-			<ComboBoxItem Content="Nazwa kanalu 1" HorizontalAlignment="Left" Width="138"/>
-		</ComboBox>
-        <Button x:Name="button_Copy" Content="BY ID" HorizontalAlignment="Left" Height="41" Margin="467,89,0,0" VerticalAlignment="Top" Width="103" Click="button_Click" Grid.Column="3" FontWeight="Bold" BorderThickness="10" Cursor="Hand">
+            <ComboBoxItem Content="Nazwa kanalu 1" HorizontalAlignment="Left" Width="138"/>
+        </ComboBox>
+        <Button x:Name="buttonBYID" Content="BY ID" HorizontalAlignment="Left" Height="41" Margin="467,89,0,0" VerticalAlignment="Top" Width="103" Click="button_Click" Grid.Column="3" FontWeight="Bold" BorderThickness="10" Cursor="Hand">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF68FF00" Offset="0.5"/>
@@ -100,6 +99,18 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
+        <ListView x:Name="listView" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="311" VerticalAlignment="Top" Width="424" Margin="10,13,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="140" Header="NoticeID"
+         DisplayMemberBinding="{Binding NoticeID}"  />
+                    <GridViewColumn Width="140" Header="Title"  
+         DisplayMemberBinding="{Binding Title}" />
+                    <GridViewColumn Width="140" Header="PageLink"
+         DisplayMemberBinding="{Binding PageLink}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>
