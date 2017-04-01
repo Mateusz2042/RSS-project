@@ -1,0 +1,5 @@
+Instalacja us³ugi
+-otwórz konsole w trybie admina
+-podaj œciê¿ke do pliku bin->debug aplikacji RssService(œcie¿ke gdzie znajduje siê plik RssService.exe)
+-po œcie¿ce do pliku dodaj RssService.exe install
+-us³uga siê zainstaluje i bêdzie widoczna w us³ugach systemu jako RssService.exe

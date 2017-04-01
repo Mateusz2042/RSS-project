@@ -103,3 +103,6 @@ C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssWpf\obj\Debug\MainWindow.bam
 C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.g.resources
 C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.Properties.Resources.resources
 C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.csproj.GenerateResource.Cache
+C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\RssWpf\bin\Debug\RssWpf.exe.config
+C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.exe
+C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\RssWpf\obj\Debug\RssWpf.pdb

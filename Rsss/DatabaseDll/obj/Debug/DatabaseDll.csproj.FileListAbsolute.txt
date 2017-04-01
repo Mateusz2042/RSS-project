@@ -27,3 +27,9 @@ C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\DatabaseDll\bin\Debug\DatabaseD
 C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\DatabaseDll\obj\Debug\DatabaseDll.csprojResolveAssemblyReference.cache
 C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\DatabaseDll\obj\Debug\DatabaseDll.dll
 C:\Users\Saul\Desktop\falat new\RSS-project\Rsss\DatabaseDll\obj\Debug\DatabaseDll.pdb
+C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\DatabaseDll\bin\Debug\DatabaseDll.dll.config
+C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\DatabaseDll\bin\Debug\DatabaseDll.dll
+C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\DatabaseDll\bin\Debug\DatabaseDll.pdb
+C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\DatabaseDll\obj\Debug\DatabaseDll.csprojResolveAssemblyReference.cache
+C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\DatabaseDll\obj\Debug\DatabaseDll.dll
+C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\DatabaseDll\obj\Debug\DatabaseDll.pdb
