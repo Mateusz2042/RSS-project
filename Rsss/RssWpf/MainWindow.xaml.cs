@@ -89,9 +89,17 @@ namespace RssWpf
             comboBoxChannelID.SelectedValuePath = "ChannelID";
 
         }
+        public void ShowNoticeByChannelID()
+        {
+            var notes = db.Notice.Where(c => c.Channel_Id==comboBoxChannelID.SelectedIndex).ToList();
+            listView.ItemsSource = notes;
+
+        }
+
 
         private void buttonBYChannelID_Click(object sender, RoutedEventArgs e)
         {
+            ShowNoticeByChannelID();
             //wyswietli artykuly z danego kanalu
         }
     }
