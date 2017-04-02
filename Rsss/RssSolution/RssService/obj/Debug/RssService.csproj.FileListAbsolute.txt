@@ -73,3 +73,5 @@ C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\RssSolution\RssService\bin\D
 C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\RssSolution\RssService\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\RssSolution\RssService\bin\Debug\Topshelf.xml
 C:\Users\Kubalone\Documents\GitHub\RSS-project\Rsss\RssSolution\RssService\obj\Debug\RssService.csprojResolveAssemblyReference.cache
+C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssSolution\RssService\bin\Debug\Topshelf.dll
+C:\Users\Liberator\Desktop\falat\RSS-project\Rsss\RssSolution\RssService\bin\Debug\Topshelf.xml

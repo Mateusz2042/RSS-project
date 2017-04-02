@@ -33,7 +33,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <ComboBox x:Name="comboBoxChannel" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="590,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand">
+        <ComboBox x:Name="comboBoxChannelID" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="590,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FFC79A00" Offset="0"/>
@@ -50,7 +50,7 @@
             </ComboBox.Background>
             <ComboBoxItem Content="Nazwa kanalu 1" HorizontalAlignment="Left" Width="138"/>
         </ComboBox>
-        <Button x:Name="buttonBYID" Content="BY ID" HorizontalAlignment="Left" Height="41" Margin="467,89,0,0" VerticalAlignment="Top" Width="103" Click="button_Click" Grid.Column="3" FontWeight="Bold" BorderThickness="10" Cursor="Hand">
+        <Button x:Name="buttonBYID" Content="BY NOTE ID" HorizontalAlignment="Left" Height="41" Margin="467,89,0,0" VerticalAlignment="Top" Width="103" Click="buttonBYID_Click" Grid.Column="3" FontWeight="Bold" BorderThickness="10" Cursor="Hand">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF68FF00" Offset="0.5"/>
@@ -61,7 +61,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="button_Copy1" Content="BY CHANNEL ID" HorizontalAlignment="Left" Height="39" Margin="467,135,0,0" VerticalAlignment="Top" Width="103" Click="button_Click" Grid.Column="3" BorderBrush="Red" FontWeight="Bold" Cursor="Hand">
+        <Button x:Name="buttonBYChannelID" Content="BY CHANNEL ID" HorizontalAlignment="Left" Height="39" Margin="467,135,0,0" VerticalAlignment="Top" Width="103" Click="buttonBYChannelID_Click" Grid.Column="3" BorderBrush="Red" FontWeight="Bold" Cursor="Hand">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF68FF00" Offset="0.5"/>
@@ -83,7 +83,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <ComboBox x:Name="comboBox_Copy" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="735,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand">
+        <ComboBox x:Name="comboBoxNoticeID" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="735,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand" IsSynchronizedWithCurrentItem="True" >
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FFC79A00" Offset="0"/>
@@ -102,12 +102,15 @@
         <ListView x:Name="listView" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="311" VerticalAlignment="Top" Width="424" Margin="10,13,0,0">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="140" Header="NoticeID"
+                    <GridViewColumn Width="30" Header="ID"
          DisplayMemberBinding="{Binding NoticeID}"  />
                     <GridViewColumn Width="140" Header="Title"  
          DisplayMemberBinding="{Binding Title}" />
                     <GridViewColumn Width="140" Header="PageLink"
-         DisplayMemberBinding="{Binding PageLink}" />
+         DisplayMemberBinding="{Binding PageLink}"/>
+                    <GridViewColumn Width="140" Header="PublishDate"
+         DisplayMemberBinding="{Binding PublishDate}"
+ />
                 </GridView>
             </ListView.View>
         </ListView>

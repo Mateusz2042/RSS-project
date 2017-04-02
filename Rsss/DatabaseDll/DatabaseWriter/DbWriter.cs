@@ -57,8 +57,8 @@ namespace Rsss.DatabaseWriter
 			using (var db = new RssContext())
 			{
 				var test = db.RssChannel.FirstOrDefault();
-				foreach (var item in XmlLinks)
-				{
+				foreach (var item in XmlLinks)//Exception 
+                {
 					int counter = 1;
 
 					try
@@ -103,7 +103,7 @@ namespace Rsss.DatabaseWriter
 
 						//db.RssChannel.Add(channel);
 						db.SaveChanges();
-						counter++;
+						counter++;//poprawic
 
 					}
 					catch (Exception ex)

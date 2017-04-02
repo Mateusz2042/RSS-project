@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using RssWpf.ReadFromdb;
+
 
 
 namespace RssWpf
@@ -24,54 +24,77 @@ namespace RssWpf
     /// </summary>
     public partial class MainWindow : Window
     {
+
         RssContext db;
-        List<Notice> notices;
+
 
         public MainWindow()
         {
+
             db = new RssContext();
-
-
             InitializeComponent();
 
+            FindNoticeByID();
+            FindNoticeByChannelID();
 
         }
- 
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            //odczyt z bazy
+            ////odczyt z bazy
             //using (db)
             //{
             //    // wszzystkie notatki
-            //    notices = db.Notice.ToList();
+            //    var notices = db.Notice;
+            //    listView.ItemsSource = notices.ToList();
             //}
-            //string s = comboBoxChannel.Text;
-            //int i = int.Parse(s);
-            //Reader r = new Reader();
-            //r.FindNoticeByID(i);
-            //Reader read = new Reader();
-            //read.FindTodayNotices();
-            var noteAll = db.Notice.ToList();
-            listView.ItemsSource = noteAll;
 
-            //ComboBoxAddValue();
-        }
 
-        public void ComboBoxAddValue()
-        {
-            List<int> Itemslist = new List<int>();
-            //comboBox_Copy.ItemsSource = db.Notice.ToList();
-            //comboBox_Copy.SelectedValuePath = "NoticeID";
-            //comboBox_Copy.DisplayMemberPath = "Title";
-            foreach (var item in db.Notice.Where(a => a.NoticeID != null).ToList())
+            DateTime startday = new DateTime();
+            DateTime endday = new DateTime();
+            startday = DateTime.Now;
+            endday = DateTime.Now.AddTicks(-1).AddDays(1);
+
+
+            var note = db.Notice.Where(c => c.PublishDate > startday && c.PublishDate < endday).ToList();
+            listView.ItemsSource = note;
+            if (listView.AlternationCount == 0)
             {
-                Itemslist.Add(item.NoticeID);
+                System.Windows.MessageBox.Show("Dzisiaj nie ma jeszcze nowych artykułów!");
             }
-        comboBox_Copy.ItemsSource = Itemslist;
-        }
-
 
         }
 
+
+
+
+
+        private void buttonBYID_Click(object sender, RoutedEventArgs e)
+        {
+            //wyswietli tekst po id notatki rownoznaczym z tytulem 
+        }
+
+        public void FindNoticeByID()
+        {
+            comboBoxNoticeID.ItemsSource = db.Notice.ToList();
+            comboBoxNoticeID.DisplayMemberPath = "Title";
+            comboBoxNoticeID.SelectedValuePath = "NoticeID";
+
+        }
+        public void FindNoticeByChannelID()
+        {
+            comboBoxChannelID.Items.Clear();
+            comboBoxChannelID.ItemsSource = db.RssChannel.ToList();
+            comboBoxChannelID.DisplayMemberPath = "ChannelName";
+            comboBoxChannelID.SelectedValuePath = "ChannelID";
+
+        }
+
+        private void buttonBYChannelID_Click(object sender, RoutedEventArgs e)
+        {
+            //wyswietli artykuly z danego kanalu
+        }
     }
+
+}
 
