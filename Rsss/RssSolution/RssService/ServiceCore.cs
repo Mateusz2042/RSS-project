@@ -15,13 +15,13 @@ namespace RssService
         public ServiceCore()
         {
             RssContext db = new RssContext();
-            _timer = new Timer(1000) { AutoReset = true };
+            _timer = new Timer(30000) { AutoReset = true };
             _timer.Elapsed += (sender, eventArgs) => DbWriter.Write();
 
 
 
             Console.WriteLine("Database write successes !!!");
-            //  Console.ReadKey();
+             Console.ReadKey();
         }
         public void Start()
         {

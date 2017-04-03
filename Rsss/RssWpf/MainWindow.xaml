@@ -22,7 +22,7 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="button" Content="TODAY" HorizontalAlignment="Left" Height="41" Margin="467,43,0,0" VerticalAlignment="Top" Width="103" Click="button_Click" Grid.Column="3" BorderBrush="Red" IsDefault="True" FontWeight="Bold" Cursor="Hand">
+        <Button x:Name="button" Content="TODAY" HorizontalAlignment="Left" Height="41" Margin="708,184,0,0" VerticalAlignment="Top" Width="103" Click="button_Click" Grid.Column="3" BorderBrush="Red" IsDefault="True" FontWeight="Bold" Cursor="Hand">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF68FF00" Offset="0.5"/>
@@ -50,7 +50,7 @@
             </ComboBox.Background>
             <ComboBoxItem Content="Nazwa kanalu 1" HorizontalAlignment="Left" Width="138"/>
         </ComboBox>
-        <Button x:Name="buttonBYID" Content="BY NOTE ID" HorizontalAlignment="Left" Height="41" Margin="467,89,0,0" VerticalAlignment="Top" Width="103" Click="buttonBYID_Click" Grid.Column="3" FontWeight="Bold" BorderThickness="10" Cursor="Hand">
+        <Button x:Name="buttonBYID" Content="ALL NOTE" HorizontalAlignment="Left" Height="41" Margin="708,230,0,0" VerticalAlignment="Top" Width="103" Click="buttonBYID_Click" Grid.Column="3" FontWeight="Bold" BorderThickness="10" Cursor="Hand">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF68FF00" Offset="0.5"/>
@@ -61,7 +61,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="buttonBYChannelID" Content="BY CHANNEL ID" HorizontalAlignment="Left" Height="39" Margin="467,135,0,0" VerticalAlignment="Top" Width="103" Click="buttonBYChannelID_Click" Grid.Column="3" BorderBrush="Red" FontWeight="Bold" Cursor="Hand">
+        <Button x:Name="buttonBYChannelID" Content="BY CHANNEL ID" HorizontalAlignment="Left" Height="39" Margin="708,276,0,0" VerticalAlignment="Top" Width="103" Click="buttonBYChannelID_Click" Grid.Column="3" BorderBrush="Red" FontWeight="Bold" Cursor="Hand">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF68FF00" Offset="0.5"/>
@@ -72,7 +72,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="label" Grid.ColumnSpan="4" Content="SHOW NEWS" HorizontalAlignment="Left" Height="26" Margin="476,13,0,0" VerticalAlignment="Top" Width="86" FontWeight="Bold" FontStyle="Italic">
+        <Label x:Name="label" Grid.ColumnSpan="4" Content="SHOW NEWS" HorizontalAlignment="Left" Height="26" Margin="717,154,0,0" VerticalAlignment="Top" Width="86" FontWeight="Bold" FontStyle="Italic">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF8D4D00" Offset="1"/>
@@ -83,7 +83,7 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <ComboBox x:Name="comboBoxNoticeID" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="735,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand" IsSynchronizedWithCurrentItem="True" >
+        <ComboBox x:Name="comboBoxNoticeID" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="28" Margin="735,43,0,0" VerticalAlignment="Top" Width="140" Cursor="Hand" IsSynchronizedWithCurrentItem="True"    >
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FFC79A00" Offset="0"/>
@@ -99,7 +99,7 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <ListView x:Name="listView" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="311" VerticalAlignment="Top" Width="424" Margin="10,13,0,0">
+        <ListView x:Name="listView" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="311" VerticalAlignment="Top" Width="575" Margin="10,13,0,0" MouseDoubleClick="listView_MouseDoubleClick" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="30" Header="ID"
@@ -114,6 +114,18 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="buttonwysw" Content="BY CHANNEL ID" HorizontalAlignment="Left" Height="39" Margin="752,99,0,0" 
+                VerticalAlignment="Top" Width="103" Click="buttonwysw_Click"      Grid.Column="3" BorderBrush="Red" FontWeight="Bold" Cursor="Hand">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF68FF00" Offset="0.5"/>
+                    <GradientStop Color="#FF008306"/>
+                    <GradientStop Color="#FF008306" Offset="0.96"/>
+                    <GradientStop Color="#FF2DB803" Offset="0.77"/>
+                    <GradientStop Color="#FF25AF03" Offset="0.223"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

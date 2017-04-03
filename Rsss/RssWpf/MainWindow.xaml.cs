@@ -71,6 +71,13 @@ namespace RssWpf
 
         private void buttonBYID_Click(object sender, RoutedEventArgs e)
         {
+            //odczyt z bazy
+            using (db)
+            {
+                // wszzystkie notatki
+                var notices = db.Notice;
+                listView.ItemsSource = notices.ToList();
+            }
             //wyswietli tekst po id notatki rownoznaczym z tytulem 
         }
 
@@ -78,7 +85,7 @@ namespace RssWpf
         {
             comboBoxNoticeID.ItemsSource = db.Notice.ToList();
             comboBoxNoticeID.DisplayMemberPath = "Title";
-            comboBoxNoticeID.SelectedValuePath = "NoticeID";
+            comboBoxNoticeID.SelectedValuePath = "PageLink";
 
         }
         public void FindNoticeByChannelID()
@@ -91,6 +98,7 @@ namespace RssWpf
         }
         public void ShowNoticeByChannelID()
         {
+            //listView.Items.Clear();
             var notes = db.Notice.Where(c => c.Channel_Id==comboBoxChannelID.SelectedIndex).ToList();
             listView.ItemsSource = notes;
 
@@ -101,6 +109,52 @@ namespace RssWpf
         {
             ShowNoticeByChannelID();
             //wyswietli artykuly z danego kanalu
+        }
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void listView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+           var foo = (Notice)listView.SelectedItems[0];
+
+            System.Diagnostics.Process.Start(foo.PageLink);
+        }
+
+        private void comboBoxNoticeID_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(comboBoxNoticeID.Text);
+
+            }
+            catch (Exception)
+            {
+
+               
+            }
+            
+        }
+
+        private void comboBoxNoticeID_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+           
+        }
+
+        private void buttonwysw_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(comboBoxNoticeID.SelectedValue.ToString());
+
+            }
+            catch (Exception)
+            {
+
+
+            }
         }
     }
 

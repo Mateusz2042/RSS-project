@@ -58,7 +58,7 @@ namespace Rsss
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //DbWriter.Write();
+            DbWriter.Write();
             
         }
 
